@@ -1,0 +1,15 @@
+FROM registry.fedoraproject.org/fedora-toolbox:34
+
+ENV SDKMAN_DIR="/usr/local/sdkman"
+
+RUN dnf -y update && dnf -y install zsh httpie tmux vim jq tmux
+RUN export FORCE=1 && sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+RUN dnf clean all
+RUN curl -s "https://get.sdkman.io" | zsh && source ~/.zshrc && \
+    sdk install java 11.0.11.hs-adpt && sdk default java 11.0.11.hs-adpt && \
+    sdk install gradle 7.2 && sdk default gradle 7.2 && \
+    sdk install groovy 3.0.8 && sdk default groovy 3.0.8 && \
+    sdk install maven 3.8.2 && sdk default maven 3.8.2 && \
+    rm -rf /usr/local/sdkman/archives/*
+
+CMD /usr/bin/zsh
