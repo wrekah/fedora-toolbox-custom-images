@@ -21,6 +21,6 @@ put that into your ~/.zshrc file
 ```
 if [ -f /run/.toolboxenv ]; then
   export SDKMAN_DIR="/usr/local/sdkman"
-[[ -s "/usr/local/sdkman/bin/sdkman-init.sh" ]] && source "/usr/local/sdkman/bin/sdkman-init.sh"
+  [[ -s "/usr/local/sdkman/bin/sdkman-init.sh" ]] && source "/usr/local/sdkman/bin/sdkman-init.sh"
 fi
 ```
