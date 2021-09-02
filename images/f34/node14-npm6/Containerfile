@@ -1,0 +1,7 @@
+FROM registry.fedoraproject.org/fedora-toolbox:34
+
+RUN dnf -y update && dnf -y install zsh httpie tmux vim jq tmux nodejs
+RUN export FORCE=1 && sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+RUN dnf clean all
+
+CMD /usr/bin/zsh

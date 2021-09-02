@@ -15,6 +15,8 @@ All images have following utilities: zsh, httpie, tmux, vim, jq, tmux (on top of
 
 * f34/java11 - contains Adopt Open JDK 11, Groovy 3.0.8, Gradle 7.2 and Maven 3.8.2
 * f34/java16 - contains Adopt Open JDK 16, Groovy 3.0.8, Gradle 7.2 and Maven 3.8.2
+* f34/node14-npm6 - contains nodejs 14.17.0 and npm 6.14.13
+* f34/node16-npm7 - contains nodejs 16.5.0 and npm 7.19.1
 
 ## ZSH, settings and knowing whether you run in toolbox
 I am using [starship prompt](https://starship.rs/). In default Fedora installation with bash, you get diamond sign when you enter toolbox. You can do something similar with starship prompt that lets you know if you run inside toolbox or not.
