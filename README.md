@@ -17,6 +17,7 @@ All images have following utilities: zsh, httpie, tmux, vim, jq, tmux (on top of
 * f34/java16 - contains Adopt Open JDK 16, Groovy 3.0.8, Gradle 7.2 and Maven 3.8.2
 * f34/node14-npm6 - contains nodejs 14.17.0 and npm 6.14.13
 * f34/node16-npm7 - contains nodejs 16.5.0 and npm 7.19.1
+* f34/node16-npm7-gatsby - contains nodejs 16.5.0, npm 7.19.1 and gatsby js
 
 ## ZSH, settings and knowing whether you run in toolbox
 I am using [starship prompt](https://starship.rs/). In default Fedora installation with bash, you get diamond sign when you enter toolbox. You can do something similar with starship prompt that lets you know if you run inside toolbox or not.
@@ -32,7 +33,7 @@ In order to use SDKMAN in your toolbox, I did following:
 
 1. I set env variable SDKMAN_DIR="/usr/local/sdkman" to make SDKMAN install binaries inside image.
 2. I put this into my ~/.zshrc file, so SDKMAN is only initialized when I am running inside toolbox.
-put that into your ~/.zshrc file
+Put this into your ~/.zshrc file
 
 ```
 if [ -f /run/.toolboxenv ]; then
