@@ -1,5 +1,6 @@
 FROM registry.fedoraproject.org/fedora-toolbox:34
 
+ENV NAME=java16
 ENV SDKMAN_DIR="/usr/local/sdkman"
 
 RUN dnf -y update && dnf -y install zsh httpie tmux vim jq tmux

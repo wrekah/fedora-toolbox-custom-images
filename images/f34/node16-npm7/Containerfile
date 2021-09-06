@@ -1,5 +1,7 @@
 FROM registry.fedoraproject.org/fedora-toolbox:34
 
+ENV NAME=node16-npm7
+
 RUN dnf -y update && dnf -y install zsh httpie tmux vim jq tmux && \
     dnf -y module install nodejs:16/development
 
