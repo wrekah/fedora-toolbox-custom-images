@@ -2,7 +2,7 @@ FROM registry.fedoraproject.org/fedora-toolbox:34
 
 ENV NAME=node14-npm6
 
-RUN dnf -y update && dnf -y install zsh httpie tmux vim jq tmux nodejs
+RUN dnf -y update && dnf -y install zsh httpie tmux vim jq nodejs
 RUN export FORCE=1 && sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 RUN dnf clean all
 

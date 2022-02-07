@@ -3,7 +3,7 @@ FROM registry.fedoraproject.org/fedora-toolbox:34
 ENV NAME=java11
 ENV SDKMAN_DIR="/usr/local/sdkman"
 
-RUN dnf -y update && dnf -y install zsh httpie tmux vim jq tmux
+RUN dnf -y update && dnf -y install zsh httpie tmux vim jq
 RUN export FORCE=1 && sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 RUN dnf clean all
 RUN curl -s "https://get.sdkman.io" | zsh && source ~/.zshrc && \
