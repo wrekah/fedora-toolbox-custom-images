@@ -1,0 +1,12 @@
+FROM registry.fedoraproject.org/fedora-toolbox:35
+
+ENV NAME=node16-npm7-gatsby
+
+RUN dnf -y update && dnf -y install zsh httpie tmux vim jq neovim python3-neovim ripgrep exa fd-find fzf && \
+    dnf -y module install nodejs:16/development
+
+RUN export FORCE=1 && sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+RUN dnf clean all
+RUN npm install -g gatsby-cli
+
+CMD /usr/bin/zsh

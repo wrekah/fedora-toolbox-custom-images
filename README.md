@@ -11,7 +11,7 @@ Given you have everything needed (Buildah, Podman, Toolbox), to build custom too
 4. Enter toolbox : ```toolbox enter fedora-toolbox-34-java16```
 
 ## Images
-All images have following utilities: zsh, httpie, tmux, vim, jq, tmux (on top of utilities provided by base image).
+All images have the following utilities: zsh, httpie, tmux, vim, jq, tmux (on top of utilities provided by base image).
 
 * f34/java11 - contains Adopt Open JDK 11, Groovy 3.0.8, Gradle 7.2 and Maven 3.8.2
 * f34/java16 - contains Adopt Open JDK 16, Groovy 3.0.8, Gradle 7.2 and Maven 3.8.2
