@@ -1,0 +1,12 @@
+FROM registry.fedoraproject.org/fedora-toolbox:37
+
+ENV NAME=node18-gatsby
+
+RUN dnf -y update && dnf -y install zsh httpie tmux vim jq neovim python3 python3-neovim ripgrep exa fd-find fzf && \
+    dnf -y module install nodejs:18/common
+
+RUN export FORCE=1 && sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+RUN dnf clean all
+RUN npm install -g gatsby-cli
+
+CMD /usr/bin/zsh
